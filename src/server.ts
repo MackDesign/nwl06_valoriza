@@ -7,6 +7,7 @@ import { router } from "./routes";
 import "./database";
 //#together
 //#unidade
+//#embuscadeevolução
 const app = express();
 
 app.use(express.json());
@@ -22,7 +23,7 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
 
   return response.status(500).json({
     status: "error",
-    message: "Interna Server Error",
+    message: "Internal Server Error",
   });
 });
 
