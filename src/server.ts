@@ -1,5 +1,6 @@
 import "reflect-metadata";
 import express, { Request, Response, NextFunction } from "express";
+import cors from "cors";
 import "express-async-errors";
 
 import { router } from "./routes";
@@ -8,7 +9,10 @@ import "./database";
 //#together
 //#unidade
 //#embuscadeevolução
+//#legacy
+//#juntos no próximo nível
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
